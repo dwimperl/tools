@@ -2,5 +2,13 @@
 Using Ubuntu 11.10 for building
 
 $ wget http://www.cpan.org/src/5.0/perl-5.14.2.tar.gz
-tar xzf perl-5.14.2.tar.gz
+$ tar xzf perl-5.14.2.tar.gz
+$ cd perl-5.14.2
+$ ./Configure  -des -Dprefix=/opt/perl5_14_2
+$ make
+$ make test
+$ sudo make install
+  add the following to ~/.bashrc
+  export PATH=/opt/perl5_14_2/bin:$PATH
+# source ~/.bashrc
 
