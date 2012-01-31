@@ -113,8 +113,11 @@ Wx::Perl::ProcessStream             0.30
 App::cpanminus                      1.5003
 Class::Adapter                      1.08
 Class::Unload                       0.07
-Class::XSAccessor                   1.12
-Debug::Client                       0.12
+Class::XSAccessor                   1.13
+ExtUtils::MakeMaker                 6.62  # upgrade
+Carp                                1.23  # upgrade
+Term::ReadLine                      1.07  # upgrade
+Debug::Client                       0.16
 Devel::Dumpvar                      1.06
 Devel::Refactor                     0.05
 File::Glob::Windows                 0.1.4
@@ -122,7 +125,7 @@ File::HomeDir                       0.98 was 0.97.
 Format::Human::Bytes                0.06
 Locale::Msgfmt                      0.15
 Module::Manifest                    1.08
-ORLite                              1.50
+ORLite                              1.51
 POD2::Base                          0.043
 PPIx::EditorTools                   0.15
 PPIx::Regexp                        0.021
@@ -134,6 +137,9 @@ Template::Tiny                      1.12
 Text::FindIndent                    0.10
 Win32::Shortcut                     0.07
 IPC::Run                            0.90
+DBD::SQLite                         1.35 # upgrade
+ORLite::Migrate                     1.09
+Text::Patch                         1.8
 Padre                               0.90
 App::cpanoutdated                   0.19
 Net::Telnet                         3.03
@@ -142,49 +148,50 @@ AppConfig                           1.66
 Template                            2.22
 Win32::SystemInfo                   0.11
 Win32::Daemon                       20110117
-Wx::Scintilla 0.32
-HTTP::Tiny 0.016
-App::pmuninstall 0.25
-Params::Validate 1.00
-Sys::Syslog 0.29
-Log::Dispatch 2.29
-Modern::Perl 1.03
-Win32::Env 0.03
-Win32::Env::Path 0.03
-Crypt::RC4 2.02
-Digest::Perl::MD5 1.8
-OLE::Storage_Lite 0.19
-Spreadsheet::ParseExcel 0.59
-Parse::RecDescent 1.965001
-Spreadsheet::WriteExcel 2.37
-Excel::Writer::XLSX 0.33
-Spreadsheet::WriteExcelXML 0.13
-B::Keywords 1.10
-Email::Address 1.892
-Readonly 1.03
-Readonly::XS                     1.05
-PPIx::Utilities::Node            1.001000
-Perl::Tidy                       20101217
-Pod::Spell                       1.01
-String::Format                   1.16
-Perl::Critic                     1.116
-Padre::Plugin::PerlCritic        0.12
-Padre::Plugin::PerlTidy          0.16
-Module::ScanDeps                 1.04
-Module::Install                  1.04
-Class::Accessor::Grouped         0.10003
-Class::C3                        0.23
-Class::C3::Componentised         1.001000
-Config::Any                      0.23
-ok                               0.02     # in Test-use-ok
-Context::Preserve                0.01
-Data::Dumper::Concise 2.020
-Class::Accessor 0.34
-Class::Accessor::Chained::Fast 0.01
-Data::Page 2.02
+Wx::Scintilla                       0.36
+HTTP::Tiny                          0.016
+App::pmuninstall                    0.25
+Params::Validate                    1.00
+Sys::Syslog                         0.29
+Log::Dispatch                       2.29
+Modern::Perl                        1.03
+Win32::Env                          0.03
+Win32::Env::Path                    0.03
+Crypt::RC4                          2.02
+Digest::Perl::MD5                   1.8
+OLE::Storage_Lite                   0.19
+Spreadsheet::ParseExcel             0.59
+Parse::RecDescent                   1.965001
+Spreadsheet::WriteExcel             2.37
+Excel::Writer::XLSX                 0.33
+Spreadsheet::WriteExcelXML          0.13
+B::Keywords                         1.10
+Email::Address                      1.892
+Readonly                            1.03
+Readonly::XS                        1.05
+PPIx::Utilities::Node               1.001000
+Perl::Tidy                   20101217
+Pod::Spell                          1.01
+String::Format                      1.16
+Perl::Critic                        1.116
+Padre::Plugin::PerlCritic           0.12
+Padre::Plugin::PerlTidy             0.16
+Module::ScanDeps                    1.04
+Module::Install                     1.04
+Class::Accessor::Grouped            0.10003
+Class::C3                           0.23
+Class::C3::Componentised            1.001000
+Config::Any                         0.23
+ok                                  0.02     # in Test-use-ok
+Context::Preserve                   0.01
+Data::Dumper::Concise               2.020
+Class::Accessor                     0.34
+Class::Accessor::Chained::Fast      0.01
+Data::Page                          2.02
 
 
-
+------------------
+TODO
 
 Hash::Merge 0.12
 Module::Find 0.06
@@ -195,7 +202,6 @@ Variable::Magic 0.44
 namespace::clean 0.20
 DBIx::Class 0.08195
 
-------------------
 *) Configure the CPAN client again:
 cpan> o conf prerequisites_policy follow
 cpan> o conf test_report 0
@@ -228,5 +234,9 @@ Any::Moose               0.15
 Test::Perl::Critic                          1.02
 Win32::GuiTest                      1.58
 
-TODO: change the way we install modules so they will go in the vendor directory! (Should that be really?)
+TODO: change the way we install modules so they will go in the vendor directory!
+(Is that really a good thing?)
+
+-----
+
 
