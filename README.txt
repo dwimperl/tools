@@ -190,25 +190,80 @@ Class::Accessor::Chained::Fast      0.01
 Data::Page                          2.02
 
 
-------------------
-TODO
-
-Hash::Merge 0.12
-Module::Find 0.06
-Path::Class 0.18
-SQL::Abstract 1.72
-Scope::Guard 0.03
-Variable::Magic 0.44
-namespace::clean 0.20
-DBIx::Class 0.08195
-
 *) Configure the CPAN client again:
 cpan> o conf prerequisites_policy follow
 cpan> o conf test_report 0
 
+git tag -a v6 -m "v6 released"
+
+
+------------------------------------
+Preparing v7
+
+Hash::Merge                            0.12
+Module::Find                           0.10
+Path::Class                            0.24
+Getopt::Long::Descriptive              0.090
+SQL::Abstract                          1.72
+Scope::Guard                           0.20
+Variable::Magic                        0.47
+Sub::Identify                          0.04
+B::Hooks::EndOfScope                   0.09
+namespace::clean                       0.22
+* DBIx::Class                            0.08196
+Alien::wxWidgets               0.53    0.54
+App::cpanminus                 1.5003  1.5007
+Module::Metadata               1.000004 1.000007
+App::cpanoutdated              0.19    0.20
+App::pmuninstall               0.25    0.28
+Archive::Extract               0.52    0.58
+Archive::Tar                   1.76    1.82
+Attribute::Handlers            0.88    0.93
+Capture::Tiny                  0.11    0.15
+Carp                           1.23    1.24
+Class::Accessor::Grouped       0.10003 0.10006
+Class::Inspector               1.25    1.27
+Params::Classify                       0.013
+Module::Runtime                        0.11
+Class::Load                            0.13
+Class::Load::XS                        0.03
+* Class::MOP                     2.0205  2.0402
+* Padre::Plugin::PerlTidy        0.16    0.21
+Wx                             0.9902  0.9903
+CPAN                           1.9600  1.9800
+YAML::Tiny                     1.48    1.50
+HTML::Form                     5.829   6.00
+WWW::Mechanize                 1.70    1.72
+Win32::API                     0.62    0.64
+Win32::ChangeNotify            1.08    1.09
+Win32::Exe                     0.15    0.17
+Win32API::File                 0.1101  0.1200
+Test::DatabaseRow              1.04    2.02
+Test::Fatal                    0.006   0.008
+Test::NoWarnings               1.02    1.04
+Test::SharedFork               0.18    0.19 
+Test::TCP                      1.13    1.15
+URI                            1.58    1.59
+Carp::Clan                             6.04
+Class::Base                            0.03
+Class::MakeMethods                     1.01
+Class::Method::Modifiers               1.08
+strictures                             1.002002
+Moo                                    0.009013
+XML::Writer                            0.615
+SQL::Translator                        0.11010
+HTTP::Body                             1.15
+HTTP::Server::Simple::PSGI             0.14
+MIME::Types                            1.34
+Dancer                                 1.3092
+
+------------------
+
+TODO
+(mark with a star the ones that will be announced)
+
 Task::Kensho
 
-Dancer
 Dancer::Plugin::SiteMap
 Dancer::Plugin::SimpleCRUD
 Dancer::Plugin::Database
@@ -222,7 +277,6 @@ Dancer::Plugin::FlashMessage                  0.313
 POE
 
 
-
 MooseX::Storage                             0.30
 MooseX::Storage::Deferred                   0.30
 MooseX::LogDispatch                         1.2002
@@ -234,9 +288,29 @@ Any::Moose               0.15
 Test::Perl::Critic                          1.02
 Win32::GuiTest                      1.58
 
+GD
+ImageMagic
+
+
 TODO: change the way we install modules so they will go in the vendor directory!
 (Is that really a good thing?)
 
------
+------------------
 
+Upgrade process
+c:\strawberry> cpan
+cpan> o conf prerequisites_policy ask
+cpan> o conf test_report 1
 
+c:\strawberry> cpan-outdated --verbose > ..\outdated.txt     (to see which modules we might want to upgrade)
+c:\strawberry> mversion New::Module
+c:\strawberry> cpan New::Module
+# update this README file with the 
+
+c:\strawberry> cpan
+cpan> o conf prerequisites_policy follow
+cpan> o conf test_report 0
+
+# TODO automatically install
+
+git tag -a v7 -m "v7 released"
