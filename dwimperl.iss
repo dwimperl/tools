@@ -1,4 +1,4 @@
-; -- padre_on_strawberry_perl.iss --
+; -- dwimperl.iss --
 
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING .ISS SCRIPT FILES!
 ; using ISC 5.4.2(a)
@@ -12,22 +12,22 @@
 ; TODO: check for other perl installations (eg. in the Path variable) and warn or even abort if there is another one
 
 [Setup]
-AppName=Padre on Strawberry Perl
-AppVersion=0.05
-DefaultDirName=\Strawberry
-DefaultGroupName=Strawberry Perl
+AppName=DwimPerl
+AppVersion=0.06
+DefaultDirName=\Dwimperl
+DefaultGroupName=DWIM Perl
 ; UninstallDisplayIcon={app}\MyProg.exe
 Compression=lzma2
 SolidCompression=yes
 SourceDir=c:\strawberry
 OutputDir=c:\output
-OutputBaseFilename=padre-on-strawberry
+OutputBaseFilename=dwimperl
 ;AppComments=
-AppContact=http://padre.perlide.org/
+AppContact=http://dwimperl.com/
 ; AppCopyright=
-AppId=Strawberry_Perl_with_Cream
+AppId=dwimperl
 ; AppMutex= TODO!
-AppPublisherURL=http://padre.perlide.org/
+AppPublisherURL=http://dwimperl.com/
 
 ChangesAssociations=yes
 ChangesEnvironment=yes
