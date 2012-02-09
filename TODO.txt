@@ -1,0 +1,6 @@
+Plan for next cycles
+
+1) One-by-one download modules from CPAN, test them and check-them intor a repository in tar.gz format
+2) Check licenses
+3) buildin internal CPAN server
+4) Have a regular cpan installation of "everything" that should be in the package.
