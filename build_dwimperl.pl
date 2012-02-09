@@ -1,8 +1,27 @@
 #!/usr/bin/env perl 
 use strict;
 use warnings;
-use 5.010;
+use v5.10;
 
+# For Windows
+if ($^O eq 'MSWin32') {
+	build_windows();
+	exit;
+}
+die "Unsupported OS '$^O'\n";
+
+# - Copy the helper files from the tools directory to the strawberry directory
+#   or just check if they are there as we keep them there
+# - check the version number in the iss file
+# - rename the result file
+sub build_windows {
+	my $cmd = qq{"c:/Program Files/Inno Setup 5/Compil32.exe"  /cc c:/work/tools/dwimperl.iss};
+	#say $cmd;
+	system $cmd;
+}
+
+
+__END__
 use File::Basename qw(dirname);
 use Cwd qw(abs_path);
 use File::Copy qw(copy);

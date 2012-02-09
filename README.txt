@@ -4,7 +4,7 @@ Building Dwimperl
 *) Download and install Strawberry perl strawberry-perl-5.12.3.0.msi
 *) Open command prompt
 *) Check in the whole Strawberry directory to a fresh Git repository
-*) Create a git repository in dwimper for perl-5.12.3.0
+*) Create a git repository in dwimperl for perl-5.12.3.0
 
 *)  For development set:
 
@@ -290,6 +290,7 @@ Win32::GuiTest                      1.58
 
 GD
 ImageMagic
+Web::Simple
 
 
 TODO: change the way we install modules so they will go in the vendor directory!
