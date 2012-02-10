@@ -140,7 +140,7 @@ Class::Unload                                   0.07
 Class::XSAccessor                               1.13
 Debug::Client                                   0.16
 Devel::Dumpvar                                  1.06
-Devel::Refactor                                 0.05
+Devel::Refactor                                 0.05   # TODO: check the tests
 File::Glob::Windows                             0.1.4
 Format::Human::Bytes                            0.06
 Locale::Msgfmt                                  0.15
@@ -161,98 +161,64 @@ ORLite::Migrate                                 1.10
 Text::Patch                                     1.8
 Wx::Scintilla                                   0.36
 Padre                                           0.94
-
-
-=================================
-TODO for first 5.14.2 release
-
-#ExtUtils::MakeMaker                 6.62  # upgrade
-#Carp                                1.23  # upgrade
-#Term::ReadLine                      1.07  # upgrade
-#File::HomeDir                       0.98 was 0.97.
-# IPC::Run                            0.90
-
-App::cpanoutdated                               0.19
+App::cpanoutdated                               0.20
 Net::Telnet                                     3.03
-Text::CSV_XS                                    0.85
-Text::CSV
+Text::CSV_XS                                    0.86
+Text::CSV                                       1.21
 AppConfig                                       1.66
-Template                                        2.22
-Win32::SystemInfo                               0.11
+Template                                        2.24
+Win32::SystemInfo                               0.11  # TODO: check the tests
 Win32::Daemon                                   20110117
-HTTP::Tiny                                      0.016
-App::pmuninstall                                0.25
-Params::Validate                                1.00
+App::pmuninstall                                0.29
+Params::Validate                                1.05
 Sys::Syslog                                     0.29
 Log::Dispatch                                   2.29
-Modern::Perl                                    1.03
+Modern::Perl                                    1.20120130
 Win32::Env                                      0.03
 Win32::Env::Path                                0.03
-Crypt::RC4                                      2.02
+Crypt::RC4                                      2.02  # TODO: check tests
 Digest::Perl::MD5                               1.8
 OLE::Storage_Lite                               0.19
 Spreadsheet::ParseExcel                         0.59
-Parse::RecDescent                               1.965001
+Parse::RecDescent                               1.967003
 Spreadsheet::WriteExcel                         2.37
-Excel::Writer::XLSX                             0.33
+Excel::Writer::XLSX                             0.46
 Spreadsheet::WriteExcelXML                      0.13
-B::Keywords                                     1.10
-Email::Address                                  1.892
+B::Keywords                                     1.12
+Email::Address                                  1.895
 Readonly                                        1.03
 Readonly::XS                                    1.05
 PPIx::Utilities::Node                           1.001000
 Perl::Tidy                               20101217
 Pod::Spell                                      1.01
 String::Format                                  1.16
-Perl::Critic                                    1.116
+Perl::Critic                                    1.117
 Padre::Plugin::PerlCritic                       0.12
-Padre::Plugin::PerlTidy                         0.16
-Module::ScanDeps                                1.04
+Padre::Plugin::PerlTidy                         0.21
+Module::ScanDeps                                1.07
 Module::Install                                 1.04
-Class::Accessor::Grouped                        0.10003
+Class::Accessor::Grouped                        0.10006
 Class::C3                                       0.23
+Hash::Merge                                     0.12
 Class::C3::Componentised                        1.001000
 Config::Any                                     0.23
-ok                                              0.02     # in Test-use-ok
 Context::Preserve                               0.01
 Data::Dumper::Concise                           2.020
 Class::Accessor                                 0.34
-Class::Accessor::Chained::Fast                  0.01
+Class::Accessor::Chained                        0.01  # was Class::Accessor::Chained::Fast TODO: add version number to Fast module?
 Data::Page                                      2.02
-
-
-*) Configure the CPAN client again:
-cpan> o conf prerequisites_policy follow
-cpan> o conf test_report 0
-
-git tag -a v6 -m "v6 released"
-
-
-------------------------------------
-Preparing v7
-
-Hash::Merge                            0.12
 Module::Find                           0.10
 Getopt::Long::Descriptive              0.090
 SQL::Abstract                          1.72
+
+
+=================================
+TODO for first 5.14.2 release
+
 Scope::Guard                           0.20
 Sub::Identify                          0.04
 DBIx::Class                            0.08196
-Module::Metadata               1.000004 1.000007
-Archive::Extract               0.52    0.58
-Archive::Tar                   1.76    1.82
-Attribute::Handlers            0.88    0.93
-Carp                           1.23    1.24
-Class::Inspector               1.25    1.27
 
-CPAN                           1.9600  1.9800
-YAML::Tiny                     1.48    1.50
-Win32::API                     0.62    0.64
-Win32::ChangeNotify            1.08    1.09
-Win32::Exe                     0.15    0.17
-Win32API::File                 0.1101  0.1200
-Test::NoWarnings               1.02    1.04
-URI                            1.58    1.59
 Class::Base                            0.03
 Class::MakeMethods                     1.01
 Class::Method::Modifiers               1.08
@@ -265,12 +231,18 @@ HTTP::Server::Simple::PSGI             0.14
 MIME::Types                            1.34
 Dancer                                 1.3092
 
+Dwimmer
+Task::Kensho
+
+*) Configure the CPAN client again:
+cpan> o conf prerequisites_policy follow
+cpan> o conf test_report 0
+
+git tag -a v6 -m "v6 released"
+
 ------------------
 
-TODO
 (mark with a star the ones that will be announced)
-
-Task::Kensho
 
 Dancer::Plugin::SiteMap
 Dancer::Plugin::SimpleCRUD
@@ -292,14 +264,13 @@ MooseX::StrictConstructor                     0.16
 MooseX::Singleton                             0.27
 Any::Moose               0.15
 
-
 Test::Perl::Critic                          1.02
 Win32::GuiTest                      1.58
 
 GD
 ImageMagic
 Web::Simple
-
+MIME::Lite
 
 TODO: change the way we install modules so they will go in the vendor directory!
 (Is that really a good thing?)
