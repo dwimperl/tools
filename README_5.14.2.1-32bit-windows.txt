@@ -1,3 +1,20 @@
+# DWIM Perl for Windows is a Perl distribution for Microsoft Windows.
+# It is based on the Strawberry Perl distribution and includes several
+# hundred additional exttensions.
+
+# The following describes the process as the package was created.
+# It also lists all the additional packages with their respective
+# version numbers. The order of the packages is the order as they
+# were added to the distribution.
+# In case you see 2 version numbers this means the module was upgraded
+# in the distribution.
+# In some cases you'll see comments next the modules names after a # mark.
+
+# All the included packages are Copyright their respective authors.
+# For detailed license information check out the individual packages.
+
+
+########################################################################
 
 # Download and install http://strawberryperl.com/package/kmx/p5.14.2.1-RC/strawberry-perl-5.14.2.1-32bit.msi
 # Open command prompt
@@ -7,7 +24,7 @@
 # c:\strawberry> git add .
 # c:\strawberry> git ci -m "initial version"
 
-# Create a git repository in dwimperl called https://github.com/dwimperl/perl-5.14.2.1-32bit-windows
+# Create a git repository called https://github.com/dwimperl/perl-5.14.2.1-32bit-windows
 # and follow the instructions to connect to the remote repository and push put the initial version to Github.
 
 # Add c:\strawberry\.gitignore   and add the following lines:
@@ -251,7 +268,7 @@ DateTime::Format::RFC3339                       1.0.5 # v in filename
 DateTime::Format::Atom                          1.0.2 # v in filename, install before XML::Atom
 XML::RSS                                        1.49
 XML::Feed                                       0.46  # TODO test failed, installed using "notest install"
-Win32::Console                                  0.09  # 0.191  no tests supplied
+Win32::Console                                  0.09  # no tests supplied
 Win32::Pipe                                     0.024 # no tests supplied
 Task::Kensho::Toolchain                         0.28
 CSS::Tiny                                       1.19
@@ -322,52 +339,85 @@ Mixin::Linewise::Readers                        0.003 # Mixin-Linewise-0.003
 Config::INI::Reader                             0.019 # supplied by Config-INI-0.019
 Tie::IxHash                                     1.22
 MooseX::OneArgNew                               0.002
+StackTrace::Auto                                0.102080
+Role::Identifiable::HasIdent                    0.005 # provided by Role-Identifiable-0.005
+String::Formatter                               0.102082
+String::Errf                                    0.006
+Role::HasMessage                                0.005
+Config::MVP::Assembler                          2.200001  # provided by Config-MVP-2.200001
+Data::Section                                   0.101621
+Hash::Merge::Simple                             0.051
+Log::Dispatch::Array                            1.001
+String::Flogger                                 1.101241
+Config::MVP::Reader::INI                        2.101461
+Sub::Exporter::GlobExporter                     0.002
+Log::Dispatchouli                               2.005
+Perl6::Junction                                 1.400000
+autobox                                         2.75
+Moose::Autobox                                  0.11
+MooseX::SetOnce                                 0.200001
+MooseX::Types::Path::Class                      0.05
+MooseX::Types::Perl                             0.101341
+Perl::PrereqScanner                             1.009
+Perl::Version                                   1.011
+Pod::Eventual                                   0.093330
+Text::Template                                  1.45
+Software::License                               0.103004
+Sub::Exporter::ForMethods                       0.100050
+POE::Test::Loops                                1.350
+Win32::Job                                      0.04 # no tests
+# Curses                                        1.28 ??? Could these be really installed on Windows?
+# IO::Pty                                       1.10 ???
+POE                                             1.350
+Task::Kensho::Async                             0.28
+Email::Simple                                   2.101
+Email::Abstract                                 3.004
+Email::Sender                                   0.110003
+Email::MIME::ContentType                        1.015
+Email::MIME::Encodings                          1.313
+Email::MessageID                                1.402
+Email::MIME                                     1.910
+YAML::XS                                        0.38      # YAML-LibYAML-0.38
+Email::MIME::Kit                                2.102010
+Task::Kensho::Email                             0.28
+Config::General                                 2.50
+Task::Kensho::Config                            0.28
+WWW::Mechanize::TreeBuilder                     1.10003
+HTTP::Lite                                      2.3
+Task::Kensho::WebCrawling                       0.28
 
-
-
-# App::Cmd::Setup                                 0.315 # test failed, reported
-
-StackTrace::Auto
-Role::Identifiable::HasIdent
-Role::HasMessage
-Throwable
-Config::MVP::Assembler                          0
-Config::MVP::Assembler::WithBundles             0
-Config::MVP::Reader                             2.101540
-Config::MVP::Reader::Findable::ByExtension      0
-Config::MVP::Reader::Finder                     0
-Config::MVP::Reader::INI                        2
-Config::MVP::Section                            2.200001
-Data::Section                                   0.004
-Hash::Merge::Simple                             0
-Log::Dispatchouli                               1.102220
-Moose::Autobox                                  0.10 not found.
-MooseX::SetOnce 0 not found.
-MooseX::Types::Path::Class 0 not found.
-MooseX::Types::Perl 0 not found.
-Perl::PrereqScanner 1.005 not found.
-Perl::Version 0 not found.
-Pod::Eventual 0.091480 not found.
-Software::License 0.101370 not found.
-Software::LicenseUtils 0 not found.
-String::Formatter 0.100680 not found.
-Sub::Exporter::ForMethods 0 not found.
-Text::Template 0 not found.
-autobox 2.53 not found.
-
+App::Cmd::Setup                                 0.316
 Dist::Zilla                                     4.300007
 
 
+# *) Configure the CPAN client again:
+# cpan> o conf prerequisites_policy follow
+# cpan> o conf test_report 0
+
+# git tag -a v1 -m "v1 released"
 
 # =================================
 # TODO for first 5.14.2 release
 
+
 # MooseX::Method::Signatures                      0.37  # failed, asked on the moose mailing list
+# Dave Rolsky suggested to go back to Eval::Closure 0.06
+# but then I should reinstall everything that uses that module, or at least test them again.
 # MooseX::Method::Signatures::Meta::Method        0
 # MooseX::Method::Signatures::Types               0
 # MooseX::Declare                                 0.35
 # Task::Moose                                     0.03
 # Task::Kensho::OOP                               0.28
+
+# Task::Kensho::XML
+# Task::Kensho::WebDev
+# Task::Kensho::DBDev
+# Task::Kensho::ExcelCSV
+# Task::Kensho::ModuleDev
+# Task::Kensho::Dates
+# Task::Kensho::Scalability
+# Task::Kensho::CLI
+# Task::Kensho::Hackery
 # Task::Kensho                                    0.31
 
 
@@ -377,17 +427,13 @@ Dist::Zilla                                     4.300007
 # JSON::Any                                       1.29
 # Devel::NYTProf                                  4.06 # prereq above could not be installed
 
+
 # Win32::Console::ANSI                            1.04  # the test rebooted my Windows XP in a Virtual Box TODO: need to check this.
 # Term::Screen::Win32                             
 
 # 
 # Task::Plack ??
 
-# *) Configure the CPAN client again:
-# cpan> o conf prerequisites_policy follow
-# cpan> o conf test_report 0
-
-# git tag -a v1 -m "v1 released"
 
 # Module::Install::Repository                     0.06
 
@@ -403,8 +449,4 @@ Dist::Zilla                                     4.300007
 # Dancer::Plugin::DBIC                          0.1504
 # Dancer::Plugin::FlashMessage                  0.313
 
-# POE
-
 # ImageMagic
-
-
