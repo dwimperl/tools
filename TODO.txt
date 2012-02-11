@@ -4,3 +4,27 @@ Plan for next cycles
 2) Check licenses
 3) buildin internal CPAN server
 4) Have a regular cpan installation of "everything" that should be in the package.
+
+
+Change the way we install modules so they will go in the vendor directory?
+Is that really a good thing for DWIM Perl or shall we keep the separation?
+
+
+
+Upgrade process
+c:\strawberry> cpan
+cpan> o conf prerequisites_policy ask
+cpan> o conf test_report 1
+
+c:\strawberry> cpan-outdated --verbose > ..\outdated.txt     (to see which modules we might want to upgrade)
+c:\strawberry> mversion New::Module
+c:\strawberry> cpan New::Module
+# update this README file with the 
+
+c:\strawberry> cpan
+cpan> o conf prerequisites_policy follow
+cpan> o conf test_report 0
+
+# TODO automatically install
+
+git tag -a v7 -m "v7 released"

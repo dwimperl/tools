@@ -207,92 +207,204 @@ Data::Dumper::Concise                           2.020
 Class::Accessor                                 0.34
 Class::Accessor::Chained                        0.01  # was Class::Accessor::Chained::Fast TODO: add version number to Fast module?
 Data::Page                                      2.02
-Module::Find                           0.10
-Getopt::Long::Descriptive              0.090
-SQL::Abstract                          1.72
+Module::Find                                    0.10
+Getopt::Long::Descriptive                       0.090
+SQL::Abstract                                   1.72
+Scope::Guard                                    0.20
+DBIx::Class                                     0.08196
+Class::Base                                     0.04
+Class::MakeMethods                              1.01
+Class::Method::Modifiers                        1.08
+strictures                                      1.002002
+Moo                                             0.009013
+XML::Writer                                     0.615
+SQL::Translator                                 0.11010 # install earlier! before DBIx::Class
+HTTP::Body                                      1.15
+HTTP::Server::Simple::PSGI                      0.14
+MIME::Types                                     1.34
+Dancer                                          1.3092
+Devel::StackTrace::AsHTML                       0.11
+Filesys::Notify::Simple                         0.08
+Hash::MultiValue                                0.10  # TODO some warnings during testing
+Module::Install::ReadmeFromPod                  0.16
+Plack                                           0.9985 # install before Dancer
+DBIx::RunSQL                                    0.07
+Date::Format                                    2.24   # supplied by TimeDate-1.20
+Mail::Address                                   2.08   # supplied by MailTools-2.08
+Email::Valid                                    0.187
+Email::Date::Format                             1.002
+MIME::Lite                                      3.028
+String::Random                                  0.22
+DateTime::Locale                                0.45
+Class::Singleton                                1.4
+DateTime::TimeZone                              1.42
+Math::Round                                     0.06
+DateTime                                        0.72
+# run test DateTime::TimeZone   again as it also needs DateTime TODO and the tests failed!, check them.
+DateTime::Format::Mail                          0.3001
+DateTime::Format::W3CDTF                        0.06
+Feed::Find                                      0.07
+URI::Fetch                                      0.09
+XML::XPath                                      1.13
+XML::Atom                                       0.41
+DateTime::Format::RFC3339                       1.0.5 # v in filename
+DateTime::Format::Atom                          1.0.2 # v in filename, install before XML::Atom
+XML::RSS                                        1.49
+XML::Feed                                       0.46  # TODO test failed, installed using "notest install"
+Win32::Console                                  0.09  # 0.191  no tests supplied
+Win32::Pipe                                     0.024 # no tests supplied
+Task::Kensho::Toolchain                         0.28
+CSS::Tiny                                       1.19
+PPI::HTML                                       1.08
+# Pod::Coverage::CountParents has an undef version number and Devel::Cover is checking it sort of.
+Devel::Cover                                    0.79
+Task::Kensho::Testing                           0.28
+Log::Log4perl                                   1.35
+Fennec::Lite                                    0.004
+Meta::Builder                                   0.003
+Exporter::Declare                               0.105
+Log::Contextual                                 0.004001
+Task::Kensho::Logging                           0.01
+ExtUtils::Depends                               0.304
+B::Hooks::OP::Check                             0.19
+B::Hooks::OP::PPAddr                            0.03
+Devel::Declare                                  0.006010
+MooseX::Types                                   0.31
+namespace::autoclean                            0.13
+MooseX::Traits                                  0.11
+Devel::PartialDump                              0.15
+MooseX::Types::DateTime                         0.07
+MooseX::Types::Structured                       0.28
+Parse::Method::Signatures                       1.003014
+Scope::Upper                                    0.18
+TryCatch                                        1.003000
+Task::Kensho::Exceptions                        0.28
+MooseX::StrictConstructor                       0.19
+Devel::Caller                                   2.05
+MooseX::Params::Validate                        0.16
+MooseX::Role::TraitConstructor                  0.01
+MooseX::Object::Pluggable                       0.0011
+MooseX::Role::Parameterized                     1.00
+Test::Unit::Lite                                0.12
+Exception::Base                                 0.2401
+Symbol::Util                                    0.0202 # deprecation warnings during testing
+constant::boolean                               0.02
+Test::Assert                                    0.0504
+MooseX::GlobRef                                 0.0701
+Hash::Util::FieldHash::Compat                   0.03
+MooseX::InsideOut                               0.106
+MooseX::Singleton                               0.29
+MooseX::NonMoose                                0.22
+MooseX::LazyRequire                             0.07
+MooseX::Meta::Method::Authorized                undef   # provided by MooseX-AuthorizedMethods-0.006
+MooseX::Meta::Method::Transactional             undef   # provided by MooseX-TransactionalMethods-0.008
+MooseX::Meta::TypeConstraint::ForceCoercion     0.01
+
+Test::Perl::Critic                              1.02
+Mouse                                           0.97
+Any::Moose                                      0.18
+Win32::GuiTest                                  1.58
+# GD                                            2.46 already installed
+SVG                                             2.50
+Log::Dispatch::Configurator                     1.00
+MooseX::LogDispatch                             1.2002
+String::RewritePrefix                           0.006
+MooseX::Storage                                 0.30
+syntax                                          0.003
+Syntax::Keyword::Gather                         1.001000
+warnings::illegalproto                          0.001000
+Web::Simple                                     0.012
+File::ShareDir::Install                         0.04
+IO::TieCombine                                  1.001
+CPAN::Meta::Requirements                        2.120351
+CPAN::Uploader                                  0.103000
+Mixin::Linewise::Readers                        0.003 # Mixin-Linewise-0.003
+Config::INI::Reader                             0.019 # supplied by Config-INI-0.019
+Tie::IxHash                                     1.22
+MooseX::OneArgNew                               0.002
 
 
-=================================
-TODO for first 5.14.2 release
 
-Scope::Guard                           0.20
-Sub::Identify                          0.04
-DBIx::Class                            0.08196
+# App::Cmd::Setup                                 0.315 # test failed, reported
 
-Class::Base                            0.03
-Class::MakeMethods                     1.01
-Class::Method::Modifiers               1.08
-strictures                             1.002002
-Moo                                    0.009013
-XML::Writer                            0.615
-SQL::Translator                        0.11010
-HTTP::Body                             1.15
-HTTP::Server::Simple::PSGI             0.14
-MIME::Types                            1.34
-Dancer                                 1.3092
+StackTrace::Auto
+Role::Identifiable::HasIdent
+Role::HasMessage
+Throwable
+Config::MVP::Assembler                          0
+Config::MVP::Assembler::WithBundles             0
+Config::MVP::Reader                             2.101540
+Config::MVP::Reader::Findable::ByExtension      0
+Config::MVP::Reader::Finder                     0
+Config::MVP::Reader::INI                        2
+Config::MVP::Section                            2.200001
+Data::Section                                   0.004
+Hash::Merge::Simple                             0
+Log::Dispatchouli                               1.102220
+Moose::Autobox                                  0.10 not found.
+MooseX::SetOnce 0 not found.
+MooseX::Types::Path::Class 0 not found.
+MooseX::Types::Perl 0 not found.
+Perl::PrereqScanner 1.005 not found.
+Perl::Version 0 not found.
+Pod::Eventual 0.091480 not found.
+Software::License 0.101370 not found.
+Software::LicenseUtils 0 not found.
+String::Formatter 0.100680 not found.
+Sub::Exporter::ForMethods 0 not found.
+Text::Template 0 not found.
+autobox 2.53 not found.
 
-Dwimmer
-Task::Kensho
-
-*) Configure the CPAN client again:
-cpan> o conf prerequisites_policy follow
-cpan> o conf test_report 0
-
-git tag -a v6 -m "v6 released"
-
-------------------
-
-(mark with a star the ones that will be announced)
-
-Dancer::Plugin::SiteMap
-Dancer::Plugin::SimpleCRUD
-Dancer::Plugin::Database
-Dancer::Plugin::Captcha::SecurityImage
-Dancer::Plugin::Auth::RBAC
-Dancer::Plugin::Auth::Twitter
-Dancer::Plugin::Database
-Dancer::Plugin::DBIC                          0.1504
-Dancer::Plugin::FlashMessage                  0.313
-
-POE
+Dist::Zilla                                     4.300007
 
 
-MooseX::Storage                             0.30
-MooseX::Storage::Deferred                   0.30
-MooseX::LogDispatch                         1.2002
-MooseX::StrictConstructor                     0.16
-MooseX::Singleton                             0.27
-Any::Moose               0.15
 
-Test::Perl::Critic                          1.02
-Win32::GuiTest                      1.58
+# =================================
+# TODO for first 5.14.2 release
 
-GD
-ImageMagic
-Web::Simple
-MIME::Lite
+# MooseX::Method::Signatures                      0.37  # failed, asked on the moose mailing list
+# MooseX::Method::Signatures::Meta::Method        0
+# MooseX::Method::Signatures::Types               0
+# MooseX::Declare                                 0.35
+# Task::Moose                                     0.03
+# Task::Kensho::OOP                               0.28
+# Task::Kensho                                    0.31
 
-TODO: change the way we install modules so they will go in the vendor directory!
-(Is that really a good thing?)
 
-------------------
+# JSON::DWIW                                      0.47 # failed with:
+# cd libjsonevt; ./configure && ./fixup_config 'C:\strawberry\perl\bin\perl.exe'
+# The system cannot find the path specified.
+# JSON::Any                                       1.29
+# Devel::NYTProf                                  4.06 # prereq above could not be installed
 
-Upgrade process
-c:\strawberry> cpan
-cpan> o conf prerequisites_policy ask
-cpan> o conf test_report 1
+# Win32::Console::ANSI                            1.04  # the test rebooted my Windows XP in a Virtual Box TODO: need to check this.
+# Term::Screen::Win32                             
 
-c:\strawberry> cpan-outdated --verbose > ..\outdated.txt     (to see which modules we might want to upgrade)
-c:\strawberry> mversion New::Module
-c:\strawberry> cpan New::Module
-# update this README file with the 
+# 
+# Task::Plack ??
 
-c:\strawberry> cpan
-cpan> o conf prerequisites_policy follow
-cpan> o conf test_report 0
+# *) Configure the CPAN client again:
+# cpan> o conf prerequisites_policy follow
+# cpan> o conf test_report 0
 
-# TODO automatically install
+# git tag -a v1 -m "v1 released"
 
-git tag -a v7 -m "v7 released"
+# Module::Install::Repository                     0.06
+
+# mark with a star the ones that will be announced)
+
+# Dancer::Plugin::SiteMap
+# Dancer::Plugin::SimpleCRUD
+# Dancer::Plugin::Database
+# Dancer::Plugin::Captcha::SecurityImage
+# Dancer::Plugin::Auth::RBAC
+# Dancer::Plugin::Auth::Twitter
+# Dancer::Plugin::Database
+# Dancer::Plugin::DBIC                          0.1504
+# Dancer::Plugin::FlashMessage                  0.313
+
+# POE
+
+# ImageMagic
 
 
