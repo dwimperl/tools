@@ -1,14 +1,18 @@
 Plan for next cycles
 
-1) One-by-one download modules from CPAN, test them and check-them intor a repository in tar.gz format
+1) One-by-one download modules from CPAN, test them and check-them into a repository in tar.gz format
 2) Check licenses
-3) buildin internal CPAN server
-4) Have a regular cpan installation of "everything" that should be in the package.
+3) build internal CPAN server
+4) Have a regular cpan installation of "everything" that should be in the package and then 
+run all the tests again to see if everything still works.
 
+During the "development" phase enale test reporting to CPAN Testers but not 
+during the "testing" phase as the reports are already out. In the "testing" phase
+we might want to report only failures but then we should include all the details
+of the current list and version numbers of prereqs.
 
 Change the way we install modules so they will go in the vendor directory?
 Is that really a good thing for DWIM Perl or shall we keep the separation?
-
 
 
 Upgrade process
@@ -28,3 +32,61 @@ cpan> o conf test_report 0
 # TODO automatically install
 
 git tag -a v7 -m "v7 released"
+
+
+
+
+# =================================
+# TODO for second 5.14.2 release
+# maybe I should not upgrade any module until I can run the new style of self checking.
+
+# MooseX::Method::Signatures                      0.37  # failed, asked on the moose mailing list
+# Dave Rolsky suggested to go back to Eval::Closure 0.06
+# but then I should reinstall everything that uses that module, or at least test them again.
+# MooseX::Method::Signatures::Meta::Method        0
+# MooseX::Method::Signatures::Types               0
+# MooseX::Declare                                 0.35
+# Task::Moose                                     0.03
+# Task::Kensho::OOP                               0.28
+
+# Task::Kensho::XML
+# Task::Kensho::WebDev
+# Task::Kensho::DBDev
+# Task::Kensho::ExcelCSV
+# Task::Kensho::ModuleDev
+# Task::Kensho::Dates
+# Task::Kensho::Scalability
+# Task::Kensho::CLI
+# Task::Kensho::Hackery
+# Task::Kensho                                    0.31
+
+
+# JSON::DWIW                                      0.47 # failed with:
+# cd libjsonevt; ./configure && ./fixup_config 'C:\strawberry\perl\bin\perl.exe'
+# The system cannot find the path specified.
+# JSON::Any                                       1.29
+# Devel::NYTProf                                  4.06 # prereq above could not be installed
+
+
+# Win32::Console::ANSI                            1.04  # the test rebooted my Windows XP in a Virtual Box TODO: need to check this.
+# Term::Screen::Win32                             
+
+# 
+# Task::Plack ??
+
+
+# Module::Install::Repository                     0.06
+
+# mark with a star the ones that will be announced)
+
+# Dancer::Plugin::SiteMap
+# Dancer::Plugin::SimpleCRUD
+# Dancer::Plugin::Database
+# Dancer::Plugin::Captcha::SecurityImage
+# Dancer::Plugin::Auth::RBAC
+# Dancer::Plugin::Auth::Twitter
+# Dancer::Plugin::Database
+# Dancer::Plugin::DBIC                          0.1504
+# Dancer::Plugin::FlashMessage                  0.313
+
+# ImageMagic

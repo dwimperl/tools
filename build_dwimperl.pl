@@ -3,6 +3,8 @@ use strict;
 use warnings;
 use v5.10;
 
+use File::Copy qw(copy);
+
 # For Windows
 if ($^O eq 'MSWin32') {
 	build_windows();
@@ -15,8 +17,12 @@ die "Unsupported OS '$^O'\n";
 # - check the version number in the iss file
 # - rename the result file
 sub build_windows {
-	my $cmd = qq{"c:/Program Files/Inno Setup 5/Compil32.exe"  /cc c:/work/tools/dwimperl.iss};
-	#say $cmd;
+	my $tools = "c:/work/tools";
+	copy "$tools/README_5.14.2.1-32bit-windows.txt", "c:/strawberry/DWIM.txt";
+	copy "$tools/windows/Padre Website.url", "c:/strawberry/win32/";
+	copy "$tools/windows/padre.ico", "c:/strawberry/win32/";
+	my $cmd = qq{"c:/Program Files/Inno Setup 5/Compil32.exe"  /cc $tools/dwimperl.iss};
+	say $cmd;
 	system $cmd;
 }
 

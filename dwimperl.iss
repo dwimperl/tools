@@ -13,7 +13,7 @@
 
 [Setup]
 AppName=DwimPerl
-AppVersion=0.06
+AppVersion=0.07
 DefaultDirName=\Dwimperl
 DefaultGroupName=DWIM Perl
 ; UninstallDisplayIcon={app}\MyProg.exe
@@ -60,6 +60,7 @@ Source: "*"; DestDir: "{app}"; Flags: "recursesubdirs"; Excludes: "\cpan\cpan_sq
 [Icons]
 Name: "{group}\Padre, the Perl IDE"; Filename: "{app}\perl\site\bin\padre.exe"
 Name: "{group}\Strawberry Perl README"; Filename: "{app}\README.txt"
+Name: "{group}\DWIM Perl README"; Filename: "{app}\DWIM.txt"
 Name: "{group}\Perl (command line)"; \
     Filename: "C:\WINDOWS\system32\cmd.exe"; \
     Comment: "Quick way to get to the command line in order to use Perl."
@@ -70,17 +71,17 @@ Name: "{group}\Strawberry Perl Release Notest"; \
     IconFilename: "{app}\win32\strawberry.ico";
 Name: "{group}\Uninstall"; Filename: "{app}\unins000.exe"
 
-Name: "{group}\Related Websites\Beginning Perl (online book)"; \
-    Filename: "{app}\win32\Beginning Perl (online book).url"; \
-    IconFilename: "{app}\win32\perlhelp.ico"; \
-    WorkingDir: "{app}\win32"; \
-    Comment: "Beginning Perl (online book)";
+;Name: "{group}\Related Websites\Beginning Perl (online book)"; \
+;    Filename: "{app}\win32\Beginning Perl (online book).url"; \
+;    IconFilename: "{app}\win32\perlhelp.ico"; \
+;    WorkingDir: "{app}\win32"; \
+;    Comment: "Beginning Perl (online book)";
 
-Name: "{group}\Related Websites\learn.perl.org (tutorials, links)"; \
-    Filename: "{app}\win32\learn.perl.org (tutorials, links).url"; \
-    IconFilename: "{app}\win32\perlhelp.ico"; \
-    WorkingDir: "{app}\win32"; \
-    Comment: "learn.perl.org (tutorials, links)";
+;Name: "{group}\Related Websites\learn.perl.org (tutorials, links)"; \
+;    Filename: "{app}\win32\learn.perl.org (tutorials, links).url"; \
+;    IconFilename: "{app}\win32\perlhelp.ico"; \
+;    WorkingDir: "{app}\win32"; \
+;    Comment: "learn.perl.org (tutorials, links)";
 
 Name: "{group}\Related Websites\Strawberry Perl Website"; \
     Filename: "{app}\win32\Strawberry Perl Website.url"; \
@@ -121,19 +122,19 @@ Name: "{group}\Tools\CPAN client"; \
     WorkingDir: "{app}\perl\bin\"; \
     IconFilename: "{app}\win32\cpan.ico";
 
-Name: "{group}\Games\Zumbis"; \
-    Filename: "{app}\perl\site\bin\zumbis.bat"; \
-    IconFilename: "{app}\win32\zumbis.ico";
+;Name: "{group}\Games\Zumbis"; \
+;    Filename: "{app}\perl\site\bin\zumbis.bat"; \
+;    IconFilename: "{app}\win32\zumbis.ico";
 
-Name: "{group}\Games\Frozen Bubble"; \
-    Filename: "{app}\perl\site\bin\frozen-bubble.bat"; \
-    IconFilename: "{app}\win32\frozen-bubble.ico";
+;Name: "{group}\Games\Frozen Bubble"; \
+;    Filename: "{app}\perl\site\bin\frozen-bubble.bat"; \
+;    IconFilename: "{app}\win32\frozen-bubble.ico";
 
-Name: "{group}\Games\SDL Perl Website"; \
-    Filename: "{app}\win32\SDL Perl Website.url"; \
-    WorkingDir: "{app}\win32"; \
-    Comment: "SDL Perl Website"; \
-    IconFilename: "{app}\win32\sdl-perl.ico";
+;Name: "{group}\Games\SDL Perl Website"; \
+;    Filename: "{app}\win32\SDL Perl Website.url"; \
+;    WorkingDir: "{app}\win32"; \
+;    Comment: "SDL Perl Website"; \
+;    IconFilename: "{app}\win32\sdl-perl.ico";
 
 
 

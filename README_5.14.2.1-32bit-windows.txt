@@ -1,14 +1,19 @@
+# DWIM Perl Version 5.14.2.1 v7 32 bit for Windows
+# ===================================================
+
+
 # DWIM Perl for Windows is a Perl distribution for Microsoft Windows.
 # It is based on the Strawberry Perl distribution and includes several
-# hundred additional exttensions.
+# hundred additional modules from CPAN.
 
 # The following describes the process as the package was created.
 # It also lists all the additional packages with their respective
 # version numbers. The order of the packages is the order as they
 # were added to the distribution.
-# In case you see 2 version numbers this means the module was upgraded
+# Where ther are 2 version numbers this means the module was upgraded
 # in the distribution.
 # In some cases you'll see comments next the modules names after a # mark.
+# You can safely ignore them.
 
 # All the included packages are Copyright their respective authors.
 # For detailed license information check out the individual packages.
@@ -394,59 +399,9 @@ Dist::Zilla                                     4.300007
 # cpan> o conf prerequisites_policy follow
 # cpan> o conf test_report 0
 
-# git tag -a v1 -m "v1 released"
 
-# =================================
-# TODO for first 5.14.2 release
+# In dwimperl.iss
+#    Update AppVersion
 
+# git tag -a v7 -m "v7 released"
 
-# MooseX::Method::Signatures                      0.37  # failed, asked on the moose mailing list
-# Dave Rolsky suggested to go back to Eval::Closure 0.06
-# but then I should reinstall everything that uses that module, or at least test them again.
-# MooseX::Method::Signatures::Meta::Method        0
-# MooseX::Method::Signatures::Types               0
-# MooseX::Declare                                 0.35
-# Task::Moose                                     0.03
-# Task::Kensho::OOP                               0.28
-
-# Task::Kensho::XML
-# Task::Kensho::WebDev
-# Task::Kensho::DBDev
-# Task::Kensho::ExcelCSV
-# Task::Kensho::ModuleDev
-# Task::Kensho::Dates
-# Task::Kensho::Scalability
-# Task::Kensho::CLI
-# Task::Kensho::Hackery
-# Task::Kensho                                    0.31
-
-
-# JSON::DWIW                                      0.47 # failed with:
-# cd libjsonevt; ./configure && ./fixup_config 'C:\strawberry\perl\bin\perl.exe'
-# The system cannot find the path specified.
-# JSON::Any                                       1.29
-# Devel::NYTProf                                  4.06 # prereq above could not be installed
-
-
-# Win32::Console::ANSI                            1.04  # the test rebooted my Windows XP in a Virtual Box TODO: need to check this.
-# Term::Screen::Win32                             
-
-# 
-# Task::Plack ??
-
-
-# Module::Install::Repository                     0.06
-
-# mark with a star the ones that will be announced)
-
-# Dancer::Plugin::SiteMap
-# Dancer::Plugin::SimpleCRUD
-# Dancer::Plugin::Database
-# Dancer::Plugin::Captcha::SecurityImage
-# Dancer::Plugin::Auth::RBAC
-# Dancer::Plugin::Auth::Twitter
-# Dancer::Plugin::Database
-# Dancer::Plugin::DBIC                          0.1504
-# Dancer::Plugin::FlashMessage                  0.313
-
-# ImageMagic
