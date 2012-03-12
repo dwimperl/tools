@@ -90,3 +90,13 @@ git tag -a v7 -m "v7 released"
 # Dancer::Plugin::FlashMessage                  0.313
 
 # ImageMagic
+
+Add PDF::Create
+
+during installation check for another perl installed on the system (either check for strawberry, or perl in the PATH variable or check for perl.exe in the PATH and then ask the user what to do?
+1) cancel installation
+2) install and put the dwim path at the end
+3) put the DWIM path at the beginning
+4) remove the other directories
+OR at least provid a README on how to change this.
+

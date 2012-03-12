@@ -27,7 +27,7 @@
 
 # c:\strawberry> git init .
 # c:\strawberry> git add .
-# c:\strawberry> git ci -m "initial version"
+# c:\strawberry> git commit -m "initial version"
 
 # Create a git repository called https://github.com/dwimperl/perl-5.14.2.1-32bit-windows
 # and follow the instructions to connect to the remote repository and push put the initial version to Github.
@@ -38,14 +38,14 @@
 #  /cpan/
 
 # c:\strawberry> git add .gitignore
-# c:\strawberry> git ci -m "ignore cpan files"
+# c:\strawberry> git commit -m "ignore cpan files"
 
 # c:\strawberry> cpan
 # cpan> o conf prerequisites_policy ask
 # cpan> reload index
 # cpan> q
 # git add perl/lib/CPAN/Config.pm
-# git ci -m "configure CPAN"
+# git commit -m "configure CPAN"
 
 #  First thing is to install CPAN::Reporter
 
