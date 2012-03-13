@@ -49,6 +49,30 @@ git tag -a v7 -m "v7 released"
 # Task::Moose                                     0.03
 # Task::Kensho::OOP                               0.28
 
+
+CatalystX::Component::Traits                  0.16
+Catalyst::Component::InstancePerContext
+Catalyst::Model::DBIC::Schema                 0.59
+Catalyst::Authentication::Store::DBIx::Class  
+Catalyst::Model::Adaptor
+Catalyst::Model::DBIC::Schema
+Catalyst::Plugin::ConfigLoader
+Catalyst::Plugin::I18N
+Catalyst::Plugin::Session::State::Cookie
+Catalyst::Plugin::Session::Store::DBIC
+Catalyst::Plugin::Session::Store::File
+Catalyst::Plugin::StackTrace
+Catalyst::Plugin::Unicode::Encoding
+Catalyst::View::Email
+Catalyst::View::TT
+CatalystX::LeakChecker
+CatalystX::Profile
+CatalystX::REPL
+CatalystX::SimpleLogin
+# Starman not supported on Windows
+Test::WWW::Mechanize::Catalyst
+# FCGI::ProcManager 0.24 failed but earlier version have not succeded either.
+Task::Catalyst                        4.02
 # Task::Kensho::WebDev
 # Task::Kensho::DBDev
 # Task::Kensho::ExcelCSV

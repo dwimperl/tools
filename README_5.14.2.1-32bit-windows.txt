@@ -413,52 +413,107 @@ Dist::Zilla                                     4.300007
 # cpan> o conf prerequisites_policy ask
 # cpan> o conf test_report 1
 
-DBIx::Class::IntrospectableM2M        0.001001
-Lingua::EN::Inflect                   1.893
-Lingua::EN::Inflect::Number           1.1
-Lingua::PT::Stemmer                   0.01
-Lingua::Stem::Fr                      0.02
-Lingua::Stem::It                      0.02
-Lingua::Stem::Ru                      0.01
-Lingua::Stem::Snowball::Da            1.01
-Lingua::Stem::Snowball::No            1.2
-Lingua::Stem::Snowball::Se            1.2
-Text::German                          0.06
-Lingua::Stem                          0.84
-Memoize::ExpireLRU                    0.55
-Lingua::EN::Tagger                    0.16
-Lingua::EN::Inflect::Phrase           0.12
-String::CamelCase                     0.02
-Text::Unidecode                       0.04
-String::ToIdentifier::EN              0.07
-MooseX::MarkAsMethods                 0.14
-Test::Distribution                    2.00
-Test::Class                           0.36   # *
-Debug::Client                   0.16  0.18   # *
-Padre::Plugin::Moose                  0.20   # *
-YAML                            0.77  0.80
-Padre::Plugin::Snippet                0.01   # *
-B::Utils                              0.19
-Data::Dump::Streamer                  2.32   # selecting 'yes' for DDS
-MooseX::Getopt                        0.39
-MooseX::AttributeHelpers              0.23
-File::Next                            1.06
-Devel::LexAlias                       0.04
-Lexical::Persistence                  1.020
-WWW::Pastebin::PastebinCom::Create    0.004
-Win32::Clipboard                      0.56
-Clipboard                             0.13
-Browser::Open                         0.04
-# Config::GitLike                       1.08  # test failed, sent to CPAN Testers
-App::Nopaste                          0.33
-# Sys::SigAction                        0.15      # OS unsupported
-Devel::REPL                           1.003012 # *
-Test::WWW::Selenium                   1.32 # *
-App::ack                              1.96 # *
-DBIx::Class::Schema::Loader           0.07010    # 0.07017  failed, report sent to CPAN Testers, ticket opened with SHA
-XML::Generator::PerlData              0.91
-XML::Filter::BufferText               1.01
-XML::SAX::Writer                      0.53
-Task::Kensho::XML                     0.28 # *
+DBIx::Class::IntrospectableM2M         0.001001
+Lingua::EN::Inflect                    1.893
+Lingua::EN::Inflect::Number            1.1
+Lingua::PT::Stemmer                    0.01
+Lingua::Stem::Fr                       0.02
+Lingua::Stem::It                       0.02
+Lingua::Stem::Ru                       0.01
+Lingua::Stem::Snowball::Da             1.01
+Lingua::Stem::Snowball::No             1.2
+Lingua::Stem::Snowball::Se             1.2
+Text::German                           0.06
+Lingua::Stem                           0.84
+Memoize::ExpireLRU                     0.55
+Lingua::EN::Tagger                     0.16
+Lingua::EN::Inflect::Phrase            0.12
+String::CamelCase                      0.02
+Text::Unidecode                        0.04
+String::ToIdentifier::EN               0.07
+MooseX::MarkAsMethods                  0.14
+Test::Distribution                     2.00
+Test::Class                            0.36   # *
+Debug::Client                    0.16  0.18   # *
+Padre::Plugin::Moose                   0.20   # *
+YAML                             0.77  0.80
+Padre::Plugin::Snippet                 0.01   # *
+B::Utils                               0.19
+Data::Dump::Streamer                   2.32   # selecting 'yes' for DDS
+MooseX::Getopt                         0.39
+MooseX::AttributeHelpers               0.23
+File::Next                             1.06
+Devel::LexAlias                        0.04
+Lexical::Persistence                   1.020
+WWW::Pastebin::PastebinCom::Create     0.004
+Win32::Clipboard                       0.56
+Clipboard                              0.13
+Browser::Open                          0.04
+# Config::GitLike                        1.08  # test failed, sent to CPAN Testers
+App::Nopaste                           0.33
+# Sys::SigAction                         0.15      # OS unsupported
+Devel::REPL                            1.003012 # *
+Test::WWW::Selenium                    1.32 # *
+App::ack                               1.96 # *
+DBIx::Class::Schema::Loader            0.07010    # 0.07017  failed, report sent to CPAN Testers, ticket opened with SHA
+XML::Generator::PerlData               0.91
+XML::Filter::BufferText                1.01
+XML::SAX::Writer                       0.53
+Task::Kensho::XML                      0.28 # *
+Variable::Magic                  0.47  0.48
+B::Hooks::EndOfScope             0.09  0.11
+CGI::Simple::Cookie                    1.113
+Class::C3::Adopt::NEXT                 0.13
+HTTP::Request::AsCGI                   1.2
+MooseX::Emulate::Class::Accessor::Fast 0.00903
+MooseX::MethodAttributes::Inheritable  0.27
+MooseX::Role::WithOverloading          0.09
+MooseX::Types::Common::Numeric         0.001007
+MooseX::Types::LoadableClass           0.007
+Plack::Middleware::ReverseProxy        0.11
+Plack::Test::ExternalServer            0.01
+Text::SimpleTable                      2.03
+Tree::Simple                           1.18
+Tree::Simple::Visitor::FindByPath      0.03
+Catalyst                               5.90011
+
+MemHandle                              0.07
+Debug::ShowStuff                       1.13
+Data::Taxi                             0.96
+PHP::Serialization                     0.34
+FreezeThaw                             0.5001
+Data::Serializer                       0.59
+Bencode                                1.4
+# Compress::PPMd                         0.11 # failed
+Convert::Bencode                       1.03
+Convert::Bencode_XS                    0.06
+Data::Denter                           0.15
+JSON::Syck                             1.20
+XML::Dumper                            0.81
+URI::Find                       20111103
+Catalyst::Action::REST                 0.99
+Catalyst::Manual                       5.9003
+
+Catalyst::Action::RenderView           0.16
+Catalyst::Plugin::ConfigLoader         0.30
+Catalyst::Plugin::Static::Simple       0.29
+MooseX::SemiAffordanceAccessor         0.09
+File::ChangeNotify                     0.21
+Catalyst::Devel                        1.36
+
+Catalyst::Controller::ActionRole       0.15
+Catalyst::ActionRole::ACL              0.06
+Object::Signature                      1.07
+Catalyst::Plugin::Session              0.32
+Catalyst::Plugin::Authentication       0.10018
+String::Escape                      2010.002
+Catalyst::Authentication::Credential::HTTP    1.014
+
+# IPC::ShareLite does not work on Windows
+Error                                         0.17017
+Cache::Cache                                  1.06
+DBIx::Class::Cursor::Cached                   1.001002
+MooseX::Traits::Pluggable                     0.10
+CatalystX::Component::Traits                  0.16
 
 
