@@ -405,3 +405,60 @@ Dist::Zilla                                     4.300007
 
 # git tag -a v7 -m "v7 released"
 
+
+# DWIM Perl Version 5.14.2.1 v8 32 bit for Windows
+# ===================================================
+
+# *) Configure the CPAN client:
+# cpan> o conf prerequisites_policy ask
+# cpan> o conf test_report 1
+
+DBIx::Class::IntrospectableM2M        0.001001
+Lingua::EN::Inflect                   1.893
+Lingua::EN::Inflect::Number           1.1
+Lingua::PT::Stemmer                   0.01
+Lingua::Stem::Fr                      0.02
+Lingua::Stem::It                      0.02
+Lingua::Stem::Ru                      0.01
+Lingua::Stem::Snowball::Da            1.01
+Lingua::Stem::Snowball::No            1.2
+Lingua::Stem::Snowball::Se            1.2
+Text::German                          0.06
+Lingua::Stem                          0.84
+Memoize::ExpireLRU                    0.55
+Lingua::EN::Tagger                    0.16
+Lingua::EN::Inflect::Phrase           0.12
+String::CamelCase                     0.02
+Text::Unidecode                       0.04
+String::ToIdentifier::EN              0.07
+MooseX::MarkAsMethods                 0.14
+Test::Distribution                    2.00
+Test::Class                           0.36   # *
+Debug::Client                   0.16  0.18   # *
+Padre::Plugin::Moose                  0.20   # *
+YAML                            0.77  0.80
+Padre::Plugin::Snippet                0.01   # *
+B::Utils                              0.19
+Data::Dump::Streamer                  2.32   # selecting 'yes' for DDS
+MooseX::Getopt                        0.39
+MooseX::AttributeHelpers              0.23
+File::Next                            1.06
+Devel::LexAlias                       0.04
+Lexical::Persistence                  1.020
+WWW::Pastebin::PastebinCom::Create    0.004
+Win32::Clipboard                      0.56
+Clipboard                             0.13
+Browser::Open                         0.04
+# Config::GitLike                       1.08  # test failed, sent to CPAN Testers
+App::Nopaste                          0.33
+# Sys::SigAction                        0.15      # OS unsupported
+Devel::REPL                           1.003012 # *
+Test::WWW::Selenium                   1.32 # *
+App::ack                              1.96 # *
+DBIx::Class::Schema::Loader           0.07010    # 0.07017  failed, report sent to CPAN Testers, ticket opened with SHA
+XML::Generator::PerlData              0.91
+XML::Filter::BufferText               1.01
+XML::SAX::Writer                      0.53
+Task::Kensho::XML                     0.28 # *
+
+

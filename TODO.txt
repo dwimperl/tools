@@ -49,7 +49,6 @@ git tag -a v7 -m "v7 released"
 # Task::Moose                                     0.03
 # Task::Kensho::OOP                               0.28
 
-# Task::Kensho::XML
 # Task::Kensho::WebDev
 # Task::Kensho::DBDev
 # Task::Kensho::ExcelCSV
